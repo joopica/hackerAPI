@@ -33,7 +33,7 @@ const Model = {
  * @description Delete the req.body.id that was added by the validation of route parameter.
  */
 function parsePatch(req, res, next) {
-    Services.ParsePatch(Model.Account, "");
+    delete req.body.id;
     return next();
 }
 
